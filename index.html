@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XI RPL — Website Kelas Biru Soft</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Sekolah</title>
 
-<link rel="stylesheet" href="style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>💙 Website Kelas XI RPL</header>
+  <!-- NAVIGATION MENU -->
+  <nav class="navbar">
+    <button class="nav-btn active" data-page="beranda">🏠 Beranda</button>
+    <button class="nav-btn" data-page="galeri">🖼️ Galeri Siswa</button>
+    <button class="nav-btn" data-page="piket">🧹 Piket</button>
+    <button class="nav-btn" data-page="jadwal">📚 Jadwal</button>
+    <button class="nav-btn" data-page="guru">👩‍🏫 Profil Guru</button>
+  </nav>
 
-<!-- NAV -->
-<nav>
-  <button onclick="showPage('beranda')">Beranda</button>
-  <button onclick="showPage('galeri')">Galeri</button>
-  <button onclick="showPage('piket')">Piket</button>
-  <button onclick="showPage('jadwal')">Jadwal Pelajaran</button>
-  <button onclick="showPage('guru')">Profil Guru</button>
-</nav>
+  <!-- HALAMAN -->
+  <section id="beranda" class="page active">
+    <h1>🌤️ Selamat Datang di Aplikasi Sekolah</h1>
+    <p>Aplikasi menampilkan menu beranda, galeri, piket, jadwal, dan profil guru.</p>
+  </section>
 
-<!-- BERANDA -->
-<section id="beranda" class="active">
-  <h2>Sejarah sekolah</h2>
-  <div><img src="smk.jpg"></div>
-  <p style="text-align:center; font-size:18px;">
- Pada awalnya SMK Negeri Tambakboyo merupakan sekolah kelas virial (kelas jauh) dari SMK Negeri 1 Tuban yang mulai dirintis pada tahun 2005. Pada bulan Juli 2006 SMK Negeri Tambakboyo membuka 2 Program keahlian yaitu : Rekayasa Perangkat Lunak (RPL) dan Teknik Otomotif. Saat itu SMK Negeri Tambakboyo masih menempati gedung SMP Negeri 1 Tambakboyo Kabupaten Tuban. Dari sinilah cikal bakal SMK Negeri Tambakboyo mulai berdiri. Dalam perkembangan selanjutnya, sesuai dengan pesatnya antusias masyarakat maka pada tahun 2007 SMK Negeri Tambakboyo membuka program keahlian baru yaitu : Teknik Instalasi Pemesinan Kapal.
-
-Sejak tahun 2009 SMK Negeri Tambakboyo memiliki 4 (empat) program keahlian yaitu : Teknik Komputer dan Jaringan (2 kelas) Teknik Kendaraan Ringan (2 kelas), Teknik Instalasi Pemesinan Kapal (1 kelas) dan Busana Butik (1 kelas). Pada tahun inilah SMK Negeri 1 Tambakboyo melembaga sendiri sesuai dengan SK Bupati No. 188.45/ 101/ KPTS/ 414.012/2009 dengan NSS : 401050613016
-  </p>
-</section>
-
-<!-- GALERI -->
-<section id="galeri">
-  <h2>📸 Galeri Siswa</h2>
-  <div class="galeri">
-    <div><img src="aisyah.jpeg" alt="aisyah"><p>1. Aisyah Hari Afika</p></div>
+  <section id="galeri" class="page">
+    <h1>🖼️ Galeri Siswa</h1>
+    <div class="galeri-container">
+     <div><img src="aisyah.jpeg" alt="aisyah"><p>1. Aisyah Hari Afika</p></div>
     <div><img src="andika.jpeg" alt="andika"><p>2. Andika Wahyu Utama</p></div>
     <div><img src="anita.jpeg" alt="anita"><p>3. Anita</p></div>
     <div><img src="aurel.jpeg" alt="aurel"><p>4. Aurel Efflian Nadjwa Putri</p></div>
@@ -71,19 +63,16 @@ Sejak tahun 2009 SMK Negeri Tambakboyo memiliki 4 (empat) program keahlian yaitu
     <div><img src="supri.jpeg" alt="supradi"><p>33. Supriadi</p></div>
     <div><img src="tiara.jpeg" alt="tiara"><p>34. Tiara Celcilya Putri</p></div>
     <div><img src="datul.jpeg" alt="atul"><p>35. Wahidatul Muharom</p></div>
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- PIKET -->
-<section id="piket">
-  <h2>🧹 Jadwal Piket</h2>
-
-  <table>
-    <tr>
-      <th>Hari</th>
+  <section id="piket" class="page">
+    <h1>🧹 Jadwal Piket</h1>
+    <ul class="list">
+     <th>Hari</th>
       <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th>
     </tr>
-
+   <table>
   <tr>
     <td>Senin</td>
     <td>Aisyah</td>
@@ -138,17 +127,13 @@ Sejak tahun 2009 SMK Negeri Tambakboyo memiliki 4 (empat) program keahlian yaitu
     <td>Anita</td>
     <td>Lukman</td>
   </tr>
-</table>
-</section>
+    </ul>
+  </section>
 
-<!-- JADWAL -->
-<section id="jadwal">
-  <h2>📘 Jadwal Pelajaran Mingguan</h2>
-  <div class="jadwal-container">
-    <div class="kolom-hari">
-      <div class="hari-header">Senin</div>
-      <ul class="jadwal-list">
-         <li>07:00 - Ceremony</li>
+  <section id="jadwal" class="page">
+    <h1>📚 Jadwal Pelajaran</h1>
+    <ul class="list">
+     <li>07:00 - Ceremony</li>
       <li>07:40 - B. Inggris</li>
       <li>08:20 - B. Inggris</li>
       <li>09:00 - PJOK</li>
@@ -239,16 +224,13 @@ Sejak tahun 2009 SMK Negeri Tambakboyo memiliki 4 (empat) program keahlian yaitu
       <li>14:30 - </li>
       </ul>
     </div>
+    </ul>
+  </section>
 
-  </div>
-</section>
-
-<!-- PROFIL GURU -->
-<section id="guru">
-  <h2>👩‍🏫 Profil Guru XI RPL</h2>
-    <div class="guru-container">
-    <div class="guru-card">
-      <img src="kepsek.png">
+  <section id="guru" class="page">
+    <h1>👩‍🏫 Profil Guru</h1>
+    <ul class="list">
+     <img src="kepsek.png">
       <h3>Agus siswanto</h3>
       <p>Kepala sekolah</p>
     </div>
@@ -322,13 +304,11 @@ ETTY SETIAWATI, S.S., Gr.</h3>
       <h3>
 Oktaferianto Eko Saputro</h3>
       <p>guru rpl</p>
-    </div>
-  </div>
-</section>
-  </div>
-</section>
+    </ul>
+  </section>
 
-<script src="script.js"></script>
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
 
 </body>
 </html>
