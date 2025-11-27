@@ -250,73 +250,92 @@ Sejak tahun 2009 SMK Negeri Tambakboyo memiliki 4 (empat) program keahlian yaitu
 <section id="guru">
   <h2>👩‍🏫 Profil Guru XI RPL</h2>
   <div class="guru-container">
-    <img src="kepsek.png">
+    <div class="guru-container">
+    <div class="guru-card">
+      <img src="kepsek.png">
       <h3>Agus siswanto</h3>
       <p>Kepala sekolah</p>
     </div>
+
     <div class="guru-card">
       <img src="bu yuni.jpeg">
       <h3>Bu yuni</h3>
       <p>Wali kelas</p>
     </div>
+
        <div class="guru-card">
       <img src="pak nuril.jpeg">
       <h3>pak nuril</h3>
       <p>guru rpl</p>
     </div>
+
        <div class="guru-card">
       <img src="a.jpeg">
       <h3>ARIESTA IKA SOFIANA, S.Pd</h3>
       <p>guru Mtk</p>
     </div>
+
        <div class="guru-card">
       <img src="b.jpeg">
       <h3>INTAN NUR VARIDA, S.Pd</h3>
       <p>guru rpl</p>
     </div>
+
        <div class="guru-card">
       <img src="c.jpeg">
       <h3>
 FARIDLATUS SYA'ADAH, S.S., M.Hum</h3>
       <p>guru Ingris</p>
     </div>
+
        <div class="guru-card">
       <img src="d.jpeg">
       <h3>
 SUWARNO, S.Kom</h3>
       <p>guru rpl</p>
     </div>
+
        <div class="guru-card">
       <img src="e.jpeg">
       <h3>YULIA SUCI LUSIANA, S.Psi</h3>
       <p>guru Bk</p>
     </div>
+
        <div class="guru-card">
       <img src="f.jpeg">
       <h3>
 YULI ROHMAWATI, S.Pd</h3>
       <p>guru sejarah</p>
     </div>
+
        <div class="guru-card">
       <img src="g.jpeg">
       <h3>
 ETTY SETIAWATI, S.S., Gr.</h3>
       <p>guru ppkn</p>
     </div>
+
        <div class="guru-card">
       <img src="h.jpeg">
       <h3>NURUL MUBTADIIN, S.Pd.I</h3>
       <p>guru rpl</p>
     </div>
+
        <div class="guru-card">
       <img src="i.jpeg">
       <h3>
 Oktaferianto Eko Saputro</h3>
       <p>guru rpl</p>
+    </div>
   </div>
 </section>
 
-<script src="script.js"></script>
+<script>
+  function showPage(id) {
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+</script>
 
 </body>
 </html>
