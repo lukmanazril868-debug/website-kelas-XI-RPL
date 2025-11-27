@@ -4,31 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aplikasi Sekolah</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVIGATION MENU -->
-  <nav class="navbar">
-    <button class="nav-btn active" data-page="beranda">🏠 Beranda</button>
-    <button class="nav-btn" data-page="galeri">🖼️ Galeri Siswa</button>
-    <button class="nav-btn" data-page="piket">🧹 Piket</button>
-    <button class="nav-btn" data-page="jadwal">📚 Jadwal</button>
-    <button class="nav-btn" data-page="guru">👩‍🏫 Profil Guru</button>
-  </nav>
+  <div class="container">
 
-  <!-- HALAMAN -->
-  <section id="beranda" class="page active">
-    <h1>🌤️ Selamat Datang di Aplikasi Sekolah</h1>
-    <p>Aplikasi menampilkan menu beranda, galeri, piket, jadwal, dan profil guru.</p>
-  </section>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2 class="logo">📘 Menu</h2>
 
-  <section id="galeri" class="page">
-    <h1>🖼️ Galeri Siswa</h1>
-    <div class="galeri-container">
-     <div><img src="aisyah.jpeg" alt="aisyah"><p>1. Aisyah Hari Afika</p></div>
+      <button class="nav-btn active" data-page="beranda">🏠 Beranda</button>
+      <button class="nav-btn" data-page="galeri">🖼️ Galeri Siswa</button>
+      <button class="nav-btn" data-page="piket">🧹 Piket</button>
+      <button class="nav-btn" data-page="jadwal">📚 Jadwal</button>
+      <button class="nav-btn" data-page="guru">👩‍🏫 Profil Guru</button>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+      <section id="beranda" class="page active">
+        <h1>🌤️ Selamat Datang</h1>
+        <p>Ini adalah aplikasi sekolah dengan tampilan soft blue aesthetic.</p>
+      </section>
+
+      <section id="galeri" class="page">
+        <h1>🖼️ Galeri Siswa</h1>
+        <div class="gallery-grid">
+          <div><img src="aisyah.jpeg" alt="aisyah"><p>1. Aisyah Hari Afika</p></div>
     <div><img src="andika.jpeg" alt="andika"><p>2. Andika Wahyu Utama</p></div>
     <div><img src="anita.jpeg" alt="anita"><p>3. Anita</p></div>
     <div><img src="aurel.jpeg" alt="aurel"><p>4. Aurel Efflian Nadjwa Putri</p></div>
@@ -63,77 +67,24 @@
     <div><img src="supri.jpeg" alt="supradi"><p>33. Supriadi</p></div>
     <div><img src="tiara.jpeg" alt="tiara"><p>34. Tiara Celcilya Putri</p></div>
     <div><img src="datul.jpeg" alt="atul"><p>35. Wahidatul Muharom</p></div>
-    </div>
-  </section>
+        </div>
+      </section>
 
-  <section id="piket" class="page">
-    <h1>🧹 Jadwal Piket</h1>
-    <ul class="list">
-     <th>Hari</th>
-      <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th>
-    </tr>
-   <table>
-  <tr>
-    <td>Senin</td>
-    <td>Aisyah</td>
-    <td>Aulia</td>
-    <td>Safa</td>
-    <td>Putri</td>
-    <td>Dini</td>
-    <td>Rafael</td>
-    <td>Aan</td>
-  </tr>
+      <section id="piket" class="page">
+        <h1>🧹 Jadwal Piket</h1>
+        <ul class="list">
+          <li>Senin : Aisyah,Aulia,Safa,Putri,Dini,Rafael,Aan</li>
+          <li>Selasa : Kirana,Khusnul,Lila,ika,Risma,Andika,Mahfud</li>
+          <li>Rabu : Novita,Arin,Silvi,Diva,Aurel,Idar,Khasan</li>
+          <li>Kamis : Renatha,Charissa,Dinda,Ekha,Tiara,Supri,Aga</li>
+          <li>Jumat :Nuriya,Marsya,Datul,Astuti,Nisya,Anita,Lukman</li>
+        </ul>
+      </section>
 
-  <tr>
-    <td>Selasa</td>
-    <td>Kirana</td>
-    <td>Khusnul</td>
-    <td>Lila</td>
-    <td>Ika</td>
-    <td>Risma</td>
-    <td>Andika</td>
-    <td>Mahfud</td>
-  </tr>
-
-  <tr>
-    <td>Rabu</td>
-    <td>Novita</td>
-    <td>Arin</td>
-    <td>Silvi</td>
-    <td>Diva</td>
-    <td>Aurel</td>
-    <td>Idar</td>
-    <td>Khasan</td>
-  </tr>
-
-  <tr>
-    <td>Kamis</td>
-    <td>Renatha</td>
-    <td>Charissa</td>
-    <td>Dinda</td>
-    <td>Ekha</td>
-    <td>Tiara</td>
-    <td>Supri</td>
-    <td>Aga</td>
-  </tr>
-
-  <tr>
-    <td>Jumat</td>
-    <td>Nuriya</td>
-    <td>Marsya</td>
-    <td>Datul</td>
-    <td>Astuti</td>
-    <td>Nisya</td>
-    <td>Anita</td>
-    <td>Lukman</td>
-  </tr>
-    </ul>
-  </section>
-
-  <section id="jadwal" class="page">
-    <h1>📚 Jadwal Pelajaran</h1>
-    <ul class="list">
-     <li>07:00 - Ceremony</li>
+      <section id="jadwal" class="page">
+        <h1>📚 Jadwal Pelajaran</h1>
+        <ul class="list">
+         <li>07:00 - Ceremony</li>
       <li>07:40 - B. Inggris</li>
       <li>08:20 - B. Inggris</li>
       <li>09:00 - PJOK</li>
@@ -222,15 +173,16 @@
       <li>13:10 - </li>
       <li>13:50 - </li>
       <li>14:30 - </li>
-      </ul>
-    </div>
-    </ul>
-  </section>
+        </ul>
+      </section>
 
-  <section id="guru" class="page">
-    <h1>👩‍🏫 Profil Guru</h1>
-    <ul class="list">
-     <img src="kepsek.png">
+      <section id="guru" class="page">
+        <h1>👩‍🏫 Profil Guru</h1>
+        <ul class="list">
+         
+  <div class="guru-container">
+    <div class="guru-card">
+      <img src="kepsek.png">
       <h3>Agus siswanto</h3>
       <p>Kepala sekolah</p>
     </div>
@@ -304,11 +256,11 @@ ETTY SETIAWATI, S.S., Gr.</h3>
       <h3>
 Oktaferianto Eko Saputro</h3>
       <p>guru rpl</p>
-    </ul>
-  </section>
+        </ul>
+      </section>
+    </main>
+  </div>
 
-  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
-
 </body>
 </html>
